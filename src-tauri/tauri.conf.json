@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "LimeStack Connector",
+  "version": "1.0.0",
+  "identifier": "io.limestack.connector",
+  "build": {
+    "beforeDevCommand": "",
+    "beforeBuildCommand": "",
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "macOS": {
+      "minimumSystemVersion": "10.15"
+    },
+    "iOS": {},
+    "linux": {
+      "deb": {},
+      "rpm": {}
+    },
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": ""
+    },
+    "createUpdaterArtifacts": true
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEVCRUNFNjc0Mzg4MDQ0NUQKUldSZFJJQTRkT2JzNjZWQW5CNzlBdlRiRFJJMmRnMWFVNkIrOUU4eXZZN0lNLzV0TjFoMzZEZksK",
+      "endpoints": [
+        "https://app.limestack.io/api/connector/update/{{target}}/{{arch}}/{{current_version}}"
+      ]
+    }
+  }
+}
